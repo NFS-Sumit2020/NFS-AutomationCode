@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
+  <Import Project="..\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0B290E6-6077-43B1-AA61-6017BBECB91B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApp</RootNamespace>
+    <AssemblyName>WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="RelevantCodes.ExtentReports, Version=1.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtentReports.2.41.0\lib\RelevantCodes.ExtentReports.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BookingSummary\BookingSummaryMain.cs" />
+    <Compile Include="BookingSummary\BookingSummaryReferences.cs" />
+    <Compile Include="Diary\DiaryMain.cs" />
+    <Compile Include="Diary\DiaryReferences.cs" />
+    <Compile Include="Login\WebAppLoginMain.cs" />
+    <Compile Include="Login\WebAppLoginReferences.cs" />
+    <Compile Include="Modules\Administration\AdministrationMain.cs" />
+    <Compile Include="Modules\Administration\AdministrationReferences.cs" />
+    <Compile Include="Modules\Administration\Alerts\AlertsMain.cs" />
+    <Compile Include="Modules\Administration\Alerts\AlertsReferences.cs" />
+    <Compile Include="Modules\Administration\LicenseManagement\LicenseManagementMain.cs" />
+    <Compile Include="Modules\Administration\LicenseManagement\LicenseManagementReferences.cs" />
+    <Compile Include="Modules\Administration\LookUp\ChargebackLookups\ChargebackLookupsMain.cs" />
+    <Compile Include="Modules\Administration\LookUp\ChargebackLookups\ChargebackLookupsReferences.cs" />
+    <Compile Include="Modules\Administration\LookUp\LookUp\LookupMain.cs" />
+    <Compile Include="Modules\Administration\LookUp\LookUp\LookupReferences.cs" />
+    <Compile Include="Modules\Administration\LookUp\Questionnaire\QuestionnaireMain.cs" />
+    <Compile Include="Modules\Administration\LookUp\Questionnaire\QuestionnaireReferences.cs" />
+    <Compile Include="Modules\Administration\LookUp\UserDefinedFields\UserDefinedFieldsMain.cs" />
+    <Compile Include="Modules\Administration\LookUp\UserDefinedFields\UserDefinedFieldsReferences.cs" />
+    <Compile Include="Modules\Administration\PropertySetup\Area\AreaMain.cs" />
+    <Compile Include="Modules\Administration\PropertySetup\Area\AreaReferences.cs" />
+    <Compile Include="Modules\Administration\PropertySetup\Departments\DepartmentsMain.cs" />
+    <Compile Include="Modules\Administration\PropertySetup\Departments\DepartmentsReferences.cs" />
+    <Compile Include="Modules\Administration\PropertySetup\Properties\PropertiesMain.cs" />
+    <Compile Include="Modules\Administration\PropertySetup\Properties\PropertiesReferences.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\AddonsByResource\AddonsByResourceMain.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\AddonsByResource\AddonsByResourceReferences.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\Addons\AddonsMain.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\Addons\AddonsReferences.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\ResourceFeatureIcons\ResourceFeatureIconsMain.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\ResourceFeatureIcons\ResourceFeatureIconsReferences.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\ResourceGroup\ResourceGroupMain.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\ResourceGroup\ResourceGroupReferences.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\ResourceType\ResourceTypeMain.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\ResourceType\ResourceTypeReferences.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\Resource\ResourceMain.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\Resource\ResourceReferences.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\UploadFiles\UploadFilesMain.cs" />
+    <Compile Include="Modules\Administration\ResourceManagement\UploadFiles\UploadFilesReferences.cs" />
+    <Compile Include="Modules\Administration\Settings\AllUserDiarySetting\AllUserDiarySettingReferences.cs" />
+    <Compile Include="Modules\Administration\Settings\AllUserDiarySetting\AllUserDiarySettingsMain.cs" />
+    <Compile Include="Modules\Administration\Settings\BusinessRuleSettings\BusinessRuleSettingsMain.cs" />
+    <Compile Include="Modules\Administration\Settings\BusinessRuleSettings\BusinessRuleSettingsReferences.cs" />
+    <Compile Include="Modules\Administration\Settings\GlobalBusinessRuleSettings\GlobalBusinessRuleSettingsMain.cs" />
+    <Compile Include="Modules\Administration\Settings\GlobalBusinessRuleSettings\GlobalBusinessRuleSettingsReferences.cs" />
+    <Compile Include="Modules\Administration\Settings\GlobalSettings\GlobalSettingsMain.cs" />
+    <Compile Include="Modules\Administration\Settings\GlobalSettings\GlobalSettingsReferences.cs" />
+    <Compile Include="Modules\Administration\Settings\Language\LanguageMain.cs" />
+    <Compile Include="Modules\Administration\Settings\Language\LanguageReferences.cs" />
+    <Compile Include="Modules\Administration\Settings\MeetingRoomPanelSettings\MeetingRoomePanelSettingsMain.cs" />
+    <Compile Include="Modules\Administration\Settings\MeetingRoomPanelSettings\MeetingRoomePanelSettingsReferences.cs" />
+    <Compile Include="Modules\Administration\Settings\PropertySettings\PropertySettingsMain.cs" />
+    <Compile Include="Modules\Administration\Settings\PropertySettings\PropertySettingsReferences.cs" />
+    <Compile Include="Modules\Administration\Settings\RollingDisplay\RollingDisplayMain.cs" />
+    <Compile Include="Modules\Administration\Settings\RollingDisplay\RollingDisplayReferences.cs" />
+    <Compile Include="Modules\Administration\Settings\Status\StatusMain.cs" />
+    <Compile Include="Modules\Administration\Settings\Status\StatusReferences.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\ActiveDirectoryConfiguration\ActiveDirectoryConfigurationMain.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\ActiveDirectoryConfiguration\ActiveDirectoryConfigurationReferences.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\LockedBookings\LockedBookingsMain.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\LockedBookings\LockedBookingsReferences.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\LoggedInUsers\LoggedInUsersMain.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\LoggedInUsers\LoggedInUsersReferences.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\Role\RoleMain.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\Role\RoleReferences.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\Teams\TeamsMain.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\Teams\TeamsReferences.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\UserGroups\UserGroupsMain.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\UserGroups\UserGroupsReferences.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\User\UserMain.cs" />
+    <Compile Include="Modules\Administration\UserSecurity\User\UserReferences.cs" />
+    <Compile Include="Modules\Administration\WizardManagement\PropertyWizardAssignment\PropertyWizardAssignmentMain.cs" />
+    <Compile Include="Modules\Administration\WizardManagement\PropertyWizardAssignment\PropertyWizardAssignmentReferences.cs" />
+    <Compile Include="Modules\Administration\WizardManagement\Wizard\WizardMain.cs" />
+    <Compile Include="Modules\Administration\WizardManagement\Wizard\WizardReferences.cs" />
+    <Compile Include="Modules\Bookings\AuthorizationRequest\AuthorizationRequestMain.cs" />
+    <Compile Include="Modules\Bookings\AuthorizationRequest\AuthorizationRequestReferences.cs" />
+    <Compile Include="Modules\Bookings\BackgroundBookings\BackgroundBookingsMain.cs" />
+    <Compile Include="Modules\Bookings\BackgroundBookings\BackgroundBookingsReferences.cs" />
+    <Compile Include="Modules\Bookings\BookingSearch\BookingSearchMain.cs" />
+    <Compile Include="Modules\Bookings\BookingSearch\BookingSearchReferences.cs" />
+    <Compile Include="Modules\Bookings\BookingsMain.cs" />
+    <Compile Include="Modules\Bookings\BookingsReferences.cs" />
+    <Compile Include="Modules\Bookings\NewBooking\NewBookingMain.cs" />
+    <Compile Include="Modules\Bookings\NewBooking\NewBookingReferences.cs" />
+    <Compile Include="Modules\Bookings\WaitlistBookings\WaitlistBookingsMain.cs" />
+    <Compile Include="Modules\Bookings\WaitlistBookings\WaitlistBookingsReferences.cs" />
+    <Compile Include="Modules\Contacts\Contact\ContactMain.cs" />
+    <Compile Include="Modules\Contacts\Contact\ContactReferences.cs" />
+    <Compile Include="Modules\Help\About\AboutMain.cs" />
+    <Compile Include="Modules\Help\About\AboutReferences.cs" />
+    <Compile Include="Modules\Help\HelpMain.cs" />
+    <Compile Include="Modules\Help\HelpReferences.cs" />
+    <Compile Include="Modules\Help\UserGuides\UserGuidesMain.cs" />
+    <Compile Include="Modules\Help\UserGuides\UserGuidesReferences.cs" />
+    <Compile Include="Modules\MyOptions\MyOptionMain.cs" />
+    <Compile Include="Modules\MyOptions\MyOptionReferences.cs" />
+    <Compile Include="Modules\Visitors\VisitorsMain.cs" />
+    <Compile Include="Modules\Visitors\VisitorsReferences.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\UtilitiesMain.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\Contacts\Company\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.79.0.0\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.79.0.0\build\Selenium.Chrome.WebDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.79.0.0\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.79.0.0\build\Selenium.Chrome.WebDriver.targets')" />
+</Project>
