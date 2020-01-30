@@ -555,7 +555,7 @@ namespace QuickBookUnitTests.TFS_Cases
         }
 
         [Test, Category("TFS Cases")]
-        public void Case3622()//Assign to Sumit - Working 
+        public void Case3622()//Assign to Sumit - Done 
         {
             utilities.ConsoleMessageStart();
             utilities.extenttest = utilities.extent.StartTest("TFS Case 3622 Resource notes not displaying on My bookings page");
@@ -631,7 +631,7 @@ namespace QuickBookUnitTests.TFS_Cases
         public void TestTearDown()
         {
             utilities.extent.Flush();
-            this.driver.Close();
+          
             // extent.Close();
             // this.driver.Quit();
         }

@@ -1,1 +1,2 @@
-TFS case 3622 Failed !!
+Attendee Verify Sucessfully
+TFS case 3622 run Sucessfully! 
